@@ -17,7 +17,7 @@ def get_info():
         with sr.Microphone() as source:
             print('listening...')
             voice = listener.listen(source)
-            info = listener.recognize_google(voice)
+            info = listener.recognize_google(voice, language="id-ID")
             print(info)
             return info.lower()
     except:
